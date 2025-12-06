@@ -16,6 +16,8 @@ import com.javero_wiki.movie_api.presentation.dto.MovieInsertDto;
 import com.javero_wiki.movie_api.presentation.dto.MovieUpdateDto;
 import com.javero_wiki.movie_api.service.interfaces.ICommonService;
 
+import jakarta.validation.Valid;
+
 @RestController // Nivel de importancia similar al @Service y @Repository
 @RequestMapping("/api/v1/movies") // Ruta base (evitamos repetir)
 public class MovieController {
@@ -30,7 +32,7 @@ public class MovieController {
     }
 
     @PostMapping
-    public ResponseEntity<MovieDto> save(@RequestBody MovieInsertDto insertedDto) {
+    public ResponseEntity<MovieDto> save(@Valid @RequestBody MovieInsertDto insertedDto) {
         MovieDto movieDto = service.save(insertedDto);
 
         // Respuesta 201 (creación)

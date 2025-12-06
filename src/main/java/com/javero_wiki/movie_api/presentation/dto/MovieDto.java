@@ -17,7 +17,7 @@ public class MovieDto {
     private int releaseYear;
     private double budget;
     private int duration;
-    private float rating;
+    private int rating;
     private String genre;
     
 }

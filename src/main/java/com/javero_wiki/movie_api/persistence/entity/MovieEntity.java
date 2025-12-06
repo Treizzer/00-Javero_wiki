@@ -39,7 +39,7 @@ public class MovieEntity {
     @Column(nullable = false)
     private int duration;
 
-    private float rating;
+    private int rating;
     
     private String genre;
     
