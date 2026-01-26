@@ -34,13 +34,14 @@ public class MovieEntity {
     @Column(name = "release_year", nullable = false)
     private int releaseYear;
     
-    private double budget;
+    private Double budget; // Cambiado
 
     @Column(nullable = false)
     private int duration;
 
-    private int rating;
+    private Integer rating; // Cambiado
     
+    @Column(nullable = false) // Nuevo
     private String genre;
     
 }
